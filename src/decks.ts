@@ -16,7 +16,7 @@ export const DECK_OF_ILLUSIONS: CardData[] = [
   { title: 'Night Hag' },
   { title: 'Assassin' },
   { title: 'Fire Giant' },
-  { title: 'Ogre Mage' },
+  { title: 'Oni' },
   { title: 'Gnoll' },
   { title: 'Kobold' },
   { title: 'Lich' },
@@ -35,6 +35,6 @@ export const DECK_OF_ILLUSIONS: CardData[] = [
   { title: 'Hill Giant' },
   { title: 'Ogre' },
   { title: 'Kobold' },
-  { title: 'You (the deck\'s owner' },
-  { title: 'You (the deck\'s owner' }
+  { title: 'You' },
+  { title: 'You' }
 ];

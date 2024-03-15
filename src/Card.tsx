@@ -9,6 +9,7 @@ export interface CardProps extends CardData {
 
 const Card: React.FC<CardProps> = ({ title, cardDrawn, setCardDrawn }) => {
     const [isFlipped, setIsFlipped] = useState<boolean>(false);
+    const imageName = title.toLowerCase().replace(/ /g, '-');
     const flipCard = () => {
       if (!cardDrawn) {
         setIsFlipped(true);
@@ -17,9 +18,12 @@ const Card: React.FC<CardProps> = ({ title, cardDrawn, setCardDrawn }) => {
     };
 
     return (
-        <div onClick={flipCard} className="rounded-2xl border-4 border-solid border-black bg-purple-300 h-48 w-36 flex m-2">
+        <div onClick={flipCard} className={`rounded-2xl border-4 border-solid border-black h-64 w-40 flex m-2" ${isFlipped ? "bg-white" : "bg-purple-200"}`}>
           { isFlipped ? (
-              <h1>{ title }</h1>
+            <div className='relative flex justify-center items-center overflow-hidden'>
+              <img className="object-cover w-full p-4 pb-8" src={`deckOfIllusions/${imageName}.png`} alt={title} />
+              <p className="absolute px-2 bottom-0 text-center align-text-bottom text-sm">{ title }</p>
+            </div>
            ) : (
               <img className="w-100" src={CardBack} alt="card back" />
            )

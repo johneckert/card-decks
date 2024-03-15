@@ -13,11 +13,11 @@ function App() {
   }
 
   return (
-    <>
-      <button onClick={reshuffle} className="rounded-2xl border-4 border-solid border-black  w-screen click:bg-red-200 m-2">
+    <div className="bg-gray-500 flex flex-col items-center justify-center">
+      <button onClick={reshuffle} className="rounded-2xl border-4 border-solid border-black m-10 p-4 bg-white w-1/2 click:bg-red-200">
           <h1>Reshuffle</h1>
       </button>
-      <div className="container h-max max-w-max flex flex-wrap bg-purple-100">
+      <div className="container h-max max-w-max flex flex-wrap items-center justify-center">
         {deck.map((card, i) => {
           return (
             <Card 
@@ -29,7 +29,7 @@ function App() {
           )
         })}   
       </div>
-    </>
+    </div>
   )
 }
 
